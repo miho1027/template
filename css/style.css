@@ -1,0 +1,58 @@
+.test-box {
+  width: 100%;
+  max-width: 500px;
+  margin-left: 300px;
+  border-bottom: red solid 4px;
+}
+
+.test-box {
+  display: flex;
+}
+
+.test-box .price, .test-box .cart {
+  font-size: 20px;
+}
+
+.test-box .price {
+  padding: 20px 0 0 20px;
+}
+
+.test-box .price span {
+  margin-left: 20px;
+}
+
+.test-box .cart {
+  margin-left: 60px;
+  border: 3px red solid;
+  padding: 20px;
+  border-left: none;
+  border-bottom: none;
+  position: relative;
+}
+
+.test-box .cart::before {
+  content: "";
+  position: absolute;
+  border-left: 3px solid red;
+  top: -1px;
+  left: -18px;
+  width: 100px;
+  height: 63px;
+  -webkit-transform: skewX(-30deg);
+          transform: skewX(-30deg);
+}
+
+.test-box:hover {
+  cursor: pointer;
+}
+
+.test-box:hover .cart {
+  color: white;
+  background-color: red;
+}
+
+.test-box:hover .cart::before {
+  background: red;
+  z-index: -1;
+}
+/*# sourceMappingURL=style.css.map */
